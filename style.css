@@ -60,18 +60,19 @@ h1 {
 }
 
 .small-text {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    padding: 24px;
+    box-sizing: border-box;
+
     background: rgba(212, 10, 195, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    padding: 24px;
-    
-    /* Change these two lines here */
-    width: 90%;          /* Lets it shrink to fit phone screens comfortably */
-    max-width: 400px;    /* Prevents it from getting too wide on a computer */
 }
-
 
 .lift-on-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
