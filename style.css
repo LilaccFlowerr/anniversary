@@ -1,5 +1,5 @@
 body {
-    background-color: #84087f; /* Use your favorite deep purple from the gradient */
+    background-color: #84087f;
     min-height: 100vh;
     min-height: 100dvh;
     margin: 0;
@@ -95,31 +95,31 @@ h1 {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    /* This creates the crescent shape using a shadow */
+    m
     box-shadow: 18px 18px 0 0 #fefae0; 
-    /* This adds a magical night-sky glow */
+  
     filter: drop-shadow(0 0 15px rgba(254, 250, 224, 0.6));
     margin: 20px;
 }
 
-/* Creates a container that spans the width of your layout */
+
 .heart-float-zone {
     display: flex;
-    justify-content: space-between; /* Pushes one heart left, one heart right */
+    justify-content: space-between;
     width: 100%;
-    max-width: 450px;               /* Matches the general width of your mobile screen layout */
-    margin: 10px auto;              /* Adds vertical space between your text blocks */
-    pointer-events: none;           /* Ensures it doesn't interfere with clicking or scrolling */
+    max-width: 450px;          
+    margin: 10px auto;           
+    pointer-events: none;       
 }
 
-/* Base styles for your floating images */
+
 .floating-heart-img {
-    width: 25px;                    /* Adjust the size of your heart images here */
+    width: 25px;                   
     height: auto;
     display: block;
 }
 
-/* Animates the left image */
+
 .image-left {
     animation: independentFloatLeft 3.5s ease-in-out infinite alternate;
 }
@@ -127,10 +127,9 @@ h1 {
 /* Animates the right image */
 .image-right {
     animation: independentFloatRight 3s ease-in-out infinite alternate;
-    animation-delay: 0.6s;          /* Out of sync for a cuter rhythm */
+    animation-delay: 0.6s;   
 }
 
-/* Up and down animation tracks */
 @keyframes independentFloatLeft {
     0% { transform: translateY(5px) rotate(-3deg); }
     100% { transform: translateY(-10px) rotate(5deg); }
