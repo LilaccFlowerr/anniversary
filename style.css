@@ -55,12 +55,13 @@ h1 {
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    padding-top: 24px;
-    width: fit-content;
-    margin: 0 auto;
+    padding: 24px; 
+    margin: 20px auto; 
     box-sizing: border-box;
     width: 90%;
+    max-width: 400px;
 }
+
 
 .small-text {
     width: 90%;
