@@ -96,14 +96,41 @@ h1 {
     margin: 20px;
 }
 
-.floating-heart {
-    display: inline-block;
-    font-size: 1.2rem;
-    margin: 0 5px;
-    animation: cuteFloat 3s ease-in-out infinite alternate;
+/* Creates a container that spans the width of your layout */
+.heart-float-zone {
+    display: flex;
+    justify-content: space-between; /* Pushes one heart left, one heart right */
+    width: 100%;
+    max-width: 450px;               /* Matches the general width of your mobile screen layout */
+    margin: 10px auto;              /* Adds vertical space between your text blocks */
+    pointer-events: none;           /* Ensures it doesn't interfere with clicking or scrolling */
 }
 
-@keyframes cuteFloat {
-    0% { transform: translateY(3px) scale(0.95); }
-    100% { transform: translateY(-8px) scale(1.05); }
+/* Base styles for your floating images */
+.floating-heart-img {
+    width: 25px;                    /* Adjust the size of your heart images here */
+    height: auto;
+    display: block;
+}
+
+/* Animates the left image */
+.image-left {
+    animation: independentFloatLeft 3.5s ease-in-out infinite alternate;
+}
+
+/* Animates the right image */
+.image-right {
+    animation: independentFloatRight 3s ease-in-out infinite alternate;
+    animation-delay: 0.6s;          /* Out of sync for a cuter rhythm */
+}
+
+/* Up and down animation tracks */
+@keyframes independentFloatLeft {
+    0% { transform: translateY(5px) rotate(-3deg); }
+    100% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes independentFloatRight {
+    0% { transform: translateY(-5px) rotate(3deg); }
+    100% { transform: translateY(10px) rotate(-5deg); }
 }
