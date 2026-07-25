@@ -1,10 +1,11 @@
 body {
-    background: linear-gradient(135deg, #84087f, #af07d9);
-    background-attachment: fixed; /* Keeps the gradient pinned smoothly to the screen */
-    background-repeat: no-repeat;  /* Prevents it from copying itself */
+    background-color: #84087f; /* Use your favorite deep purple from the gradient */
     min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
+    overflow-x: hidden;
 }
+
 
 h1 {
     color: rgb(185, 7, 217)
@@ -65,8 +66,12 @@ h1 {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     padding: 24px;
-    width: 600px;
+    
+    /* Change these two lines here */
+    width: 90%;          /* Lets it shrink to fit phone screens comfortably */
+    max-width: 400px;    /* Prevents it from getting too wide on a computer */
 }
+
 
 .lift-on-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
